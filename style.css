@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  :root {
+    --primary-font: "Poppins", sans-serif;
+    --white-color: #fff;
+    --blue-color: #150050;
+    --light-blue-color: #5f39e6;
+  }
+  
+  body {
+    font-family: var(--primary-font);
+    background-image: url(./images/image.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .wrapper {
+    width: 800px;
+    margin: auto;
+    text-align: center;
+  }
+  
+  h1 {
+    font-weight: 300;
+    font-size: 4em;
+    text-transform: uppercase;
+    color: var(--white-color);
+    margin-bottom: 20px;
+  }
+  
+  #seconds,
+  #tens,
+  p {
+    font-size: 3em;
+    color: var(--white-color);
+    margin-bottom: 40px;
+  }
+  
+  .common_btn {
+    border-radius: 5px;
+    background-color: transparent;
+    color: var(--white-color);
+    border: 2px solid var(--white-color);
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    padding: 14px 24px;
+    width: 180px;
+    margin: 10px;
+    outline: none;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  }
+  
+  .common_btn:hover,
+  .common_btn:focus {
+    background-color: var(--light-blue-color);
+    color: var(--white-color);
+    border-color: var(--light-blue-color);
+  }
+  
+  .common_btn::before {
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: -6px;
+    right: -6px;
+    bottom: -6px;
+    border-radius: 8px;
+    background-color: var(--light-blue-color);
+    opacity: 0.4;
+    z-index: -1;
+    transition: opacity 0.3s;
+  }
+  
+  .common_btn:hover::before,
+  .common_btn:focus::before {
+    opacity: 1;
+  }
+  
